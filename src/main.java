@@ -22,7 +22,7 @@ public class main {
 
 
         for(Schueler k : set){
-            System.out.println(k.getVorname() + k.notenListe());
+            System.out.println(k.getVorname() + ": " + k.notenListe());
         }
 
         //Test für EmailListe startet hier
