@@ -75,11 +75,12 @@ public class EmailListe {
         String auflistung = "";
 
         for(Map.Entry<Schueler, Set<String>> eintrag : map.entrySet()){
-            auflistung += eintrag.getKey();
+            auflistung += eintrag.getKey().getVorname();
             int index = 1;
             for(String s : eintrag.getValue()){
-                auflistung += "E" + index + ": " + s;
+                auflistung += " " + s + " ";
             }
+            auflistung += " / ";
         }
         return auflistung;
     }

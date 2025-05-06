@@ -25,10 +25,34 @@ public class main {
             System.out.println(k.getVorname() + k.notenListe());
         }
 
+        //Test für EmailListe startet hier
+        System.out.println("------------------------");
+        Schueler s4 = new Schueler(18, "Lara", "weixelbraun", 'b');
+        Schueler s5 = new Schueler(16, "Matea", "Romano", 'a');
+
+        EmailListe liste = new EmailListe();
+        liste.addEmail("lweixelbraun", s4);
+        liste.addEmail("hallo", s4);
+        liste.addEmail("mromano", s5);
+        liste.addEmail("tschüss", s5);
+        System.out.println(liste.toString());
+
+        for(String email : liste.searchEmail(s4)){
+            System.out.print(email + " ");
+        }
+        System.out.println();
+
+
+        System.out.println(liste.toString());
+        liste.deleteS(s4);
+        System.out.println(liste.toString());
+
+        liste.deleteE(s5, "mromano");
+        System.out.println(liste.toString());
+
+
+
 
 
     }
-
-
-
 }
